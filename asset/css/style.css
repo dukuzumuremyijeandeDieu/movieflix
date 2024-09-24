@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+*{
+    --background-color: #1e1e1e !important;
+    --container-bg-color: #242424 !important;
+    --text-color: #fff;
+    --main-color: #b91c1c;
+    --hover-color: #b91c1cde;
+}
 .bg-dark{
     background-color: #242424 !important;
 }
@@ -12,11 +20,12 @@ body{
 .selector-for-some-widget {
     box-sizing: content-box;
 }
-header{
+.navbar{
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .logo{
     width: 70px;
@@ -27,16 +36,48 @@ header{
     width: 100%;
     height: 100%;
     position: relative;
+    object-fit: cover;
 }
-.btn{
-    background-color: #007bff; /* New background color */
-    color: #fff;               /* New text color */
-    border-radius: 0.5rem;     /* Change border radius */
-     /* Change padding */
-    font-size: 12px;   
+.user-profile{
+    width: 30px;
+    height: 30px;
+}
+.user-profile img{
     position: relative;
+    border-radius: 50%;
 }
-.btn-primary{
-    background-color: black !important;
-    color: aliceblue;
+.form-control{
+    background-color: var(--background-color);
+    border: none;
+    caret-color: var(--main-color);
+    color: var(--text-color) !important;
+    cursor: pointer;
+}
+.form-control:focus{
+    background-color: var(--background-color);
+    border-color: var(--main-color); 
+    box-shadow: 0 0 0 0.2rem rgb(189 56 56 / 25%);
+    cursor: pointer;
+}
+.form-control::placeholder{
+    color: var(--text-color);
+    cursor: pointer;
+}
+.btn-red{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.btn-red:hover{
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+.btn:focus{
+    
+    outline: none;
+    border-color: none;
+}
+.btn.focus, .btn:focus {
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgb(189 56 56 / 25%);
 }
