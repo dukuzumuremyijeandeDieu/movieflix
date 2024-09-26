@@ -89,7 +89,7 @@
            </a>
         </li>
         <li class="nav-item">
-           <a class="nav-link" href="#">
+           <a class="nav-link" href="latest.html">
             <i class="bi bi-calendar4"></i>
            <span>Latest</span>
            </a>
@@ -108,1044 +108,1052 @@
             <div class="col-md-12">
               <div class="movie-selection">
                 <div class="selection pl-4 mt-4 pb-2">
-                  
-                    <button class="btn btn-secondary active" id="all-movie-btn" type="button">All</button>
-                  
-                    <button class="btn btn-secondary" type="button" id="action-movie-btn">Action</button>
-                  
-                    <button class="btn btn-secondary" id="horro-movie-btn" type="button">Horro</button>
-                  
-                    <button class="btn btn-secondary" type="button" id="drama-movie-btn">Drama</button>
-                  
-                    <button class="btn btn-secondary" type="button" id="rommance-movie-btn">Romance</button>
-                   
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-action-tab" data-toggle="pill" href="#pills-action" role="tab" aria-controls="pills-action" aria-selected="true">Action</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-horror-tab" data-toggle="pill" href="#pills-horro" role="tab" aria-controls="pills-horro" aria-selected="true">Horro</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-drama-tab" data-toggle="pill" href="#pills-drama" role="tab" aria-controls="pills-drama" aria-selected="true">Drama</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-romance-tab" data-toggle="pill" href="#pills-romance" role="tab" aria-controls="pills-romance" aria-selected="true">Romance</a>
+                      </li>
+                    </ul>
                 </div>
               </div>
             </div>
             
-            
-            <section id="all-movie-section" style="display: block;">
+            <div class="tab-content" id="pills-tabContent">
+              <section class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
                 
-              <div class="col-md-12 mt-2">
-                <div class="main-title">
-                  <h6>All movies</h6>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="movies-container">
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/slider/slider1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/05.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/04.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/03.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/02.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/01.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/06.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/05.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/04.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/03.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/02.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/01.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
+                <div class="col-md-12 mt-2">
+                  <div class="main-title">
+                    <h6>All movies</h6>
+                    <div class="line"></div>
                   </div>
                 </div>
-            </section>
-            <section id="action-movie-section" style="display: none;">
-              <div class="col-md-12 mt-2">
-                <div class="main-title">
-                  <h6>Action</h6>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="movies-container">
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/trending-label.png" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                <div class="col-md-12">
+                  <div class="movies-container">
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/slider/slider1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/05.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/06.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/04.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/03.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/05.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/02.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/suggested/01.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/04.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/06.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/05.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/03.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/04.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/03.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/02.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/02.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/top-10/01.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/01.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/05.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/04.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/03.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/02.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/01.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                   </div>
-                  </div>
-                </div>
-            </section>
-            <section id="horro-movie-section" style="display: none;">
-              <div class="col-md-12 mt-2">
-                <div class="main-title">
-                  <h6>Horrro</h6>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="movies-container">
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/parallax/avatar.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/se1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb5.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n4.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb3.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb2.jpg
-                      " alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n5.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n4.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n3.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n2.png" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
+              </section>
+              <section class="tab-pane fade" id="pills-action" role="tabpanel" aria-labelledby="pills-action-tab">
+                <div class="col-md-12 mt-2">
+                  <div class="main-title">
+                    <h6>Action</h6>
+                    <div class="line"></div>
                   </div>
                 </div>
-            </section>
-            <section id="drama-movie-section" style="display: none;">
-              <div class="col-md-12 mt-2">
-                <div class="main-title">
-                  <h6>Daram</h6>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="movies-container">
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m5.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                <div class="col-md-12">
+                  <div class="movies-container">
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="watch.html">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/trending-label.png" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="watch.html" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="watch.html">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/06.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="watch.html" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m4.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/05.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/04.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m3.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/03.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/02.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m2.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/trending/01.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/05.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/04.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/03.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe5.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/02.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/tvthrillers/01.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe4.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe3.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe2.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce5.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce4.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                   </div>
-                  </div>
-                </div>
-            </section>
-            <section id="romance-movie-section" style="display: none;">
-              <div class="col-md-12 mt-2">
-                <div class="main-title">
-                  <h6>Romance</h6>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="movies-container">
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce2.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f2.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f3.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt2.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt3.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <a href="#" class="play-icon">
-                      <i class="bi bi-play-fill "></i>
-                    </a>
-                    <a href="#">
-                      <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt4.jpg" alt="Card image cap"> 
-                    </a>
-                    <div class="time">
-                      <span>1:30:5</span>
-                    </div>
-                    <div class="card-body pl-2">
-                      <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
-                      <p class="card-text pb-0"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
+              </section>
+              <section class="tab-pane fade" id="pills-horro" role="tabpanel" aria-labelledby="pills-horror-tab">
+                <div class="col-md-12 mt-2">
+                  <div class="main-title">
+                    <h6>Horrro</h6>
+                    <div class="line"></div>
                   </div>
                 </div>
-            </section>
+                <div class="col-md-12">
+                  <div class="movies-container">
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="watch.html">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/parallax/avatar.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="watch.html" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="watch.html">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/se1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="watch.html" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb5.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n4.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb3.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb2.jpg
+                        " alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/pb1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n5.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n4.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n3.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n2.png" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/n1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </section>
+              <section class="tab-pane fade" id="pills-drama" role="tabpanel" aria-labelledby="pills-drama-tab">
+                <div class="col-md-12 mt-2">
+                  <div class="main-title">
+                    <h6>Daram</h6>
+                    <div class="line"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="movies-container">
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="watch.html">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m5.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="watch.html" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="watch.html">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m4.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="watch.html" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m3.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m2.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/m1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe5.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe4.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe3.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe2.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/fe1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce5.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce4.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </section>
+              <section class="tab-pane fade" id="pills-romance" role="tabpanel" aria-labelledby="pills-romance-tab">
+                <div class="col-md-12 mt-2">
+                  <div class="main-title">
+                    <h6>Romance</h6>
+                    <div class="line"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="movies-container">
+                    <div class="card">
+                      <a href="watch.html" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="watch.html">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce2.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="watch.html" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/ce1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f2.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f3.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt2.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/favorite/f1.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt3.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <a href="#" class="play-icon">
+                        <i class="bi bi-play-fill "></i>
+                      </a>
+                      <a href="#">
+                        <img class="card-img-top img-fluid" style="width: 100%; height: 150px; object-fit:cover;"  src="./asset/images/episodes/bbt4.jpg" alt="Card image cap"> 
+                      </a>
+                      <div class="time">
+                        <span>1:30:5</span>
+                      </div>
+                      <div class="card-body pl-2">
+                        <h5 class="card-title pb-0"><a href="#" class="text-white text-decoration-none">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. </a></h5>
+                        <p class="card-text pb-0"></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </section>
+            </div>
+            
             </div>
           </div>
         </div>
@@ -1153,7 +1161,7 @@
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
-     <script src="./asset/js/main.js"></script>
+     <script src="./asset/js/mai.js"></script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
