@@ -61,4 +61,8 @@ allMoviesBtn.addEventListener("click", function(){
   horroSection.style.display = "none";
   actionSection.style.display = "none";
   allMovieSection.style.display = "block";
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> b40bbb15b016b52d8cff3602b6ccd37521f939e3
