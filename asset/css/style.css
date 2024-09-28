@@ -569,11 +569,16 @@ iframe{
     color: var(--text-color); 
 }
 .video-card-list .video-card-body .video-title {
-    line-height: 17px;
+    max-height: 74px;
+    text-decoration: none;
+    color: var(--text-color);
     text-overflow: ellipsis;
     overflow: hidden;
-    max-height: 74px;
-    height: auto;
+    bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    position: relative;
 }
 /*latest movies*/
 .latest-action, .latest-horro, .latest-romance, .latest-drama {
@@ -626,7 +631,151 @@ iframe{
  .slider-btn .swiper-button-next {
    right: -20px;          /* Position to the right of container */
  }
+ .image-slider-one{
+    
+ }
+.big-image-slide-1{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    overflow-x: auto;
+    gap: 0px;
+    grid-auto-flow: column; 
+    white-space: nowrap;
+}
+/* Container for the card */
+.card-container {
+    width: 300px; /* Set desired card width */
+    height: 300px; /* Set desired card height */
+    position: relative; /* Relative positioning for overlay */
+    border-radius: var(--border-raduis); /* Round the card corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    color: white;
+  }
 
+  /* Image covering the card */
+  .card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image covers the card */
+    position: absolute; /* Position it absolutely within the container */
+    top: 0;
+    left: 0;
+    z-index: 0; /* Send the image to the back */
+  }
+
+  /* Content inside the card */
+  .card-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the image */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background for readability */
+    border-radius: 0 0 15px 15px; /* Match border radius */
+  }
+
+  /* Card title */
+  /* .card-title {
+    font-size: 24px;
+    font-weight: bold;
+  } */
+
+  /* Card description */
+  .card-description {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .swiper-container {
+    width: 80%; /* Set the width of the container */
+    height: auto;
+    max-width: 800px; /* Maximum width of the container */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+  }
+  .swiper-container {
+    width: 50%; /* Set each slide to 50% of container width */
+    height: 117px ; /* Set the height of each slide */
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  .card-img-overlay{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg,black,transparent);
+  }
+  .card-img-overlay .card-title{
+    margin-top: 10%;
+    text-decoration: none;
+    color: var(--text-color);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    max-height: 100px;
+  }
+  .text-main{
+    color: var(--main-color);
+  }
+  .play-btn{
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-raduis-img);
+    border: 1px solid var(--border-color);
+    z-index: 10;
+    background-color: rgba(255,0,0,0.185);
+    position: absolute;
+  }
+  .play-btn .main-play-icon{
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-raduis-img);
+    transition: all ease 0.3s;
+  }
+  .play-btn a:hover{
+    background-color: var(--main-color);
+    transition: all ease 0.3s;
+  }
+  .main-play-icon i{
+    font-size: 35px;
+    color: var(--text-color);
+  }
+  .play-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+  }
 
 /* btn change*/
 .bg-primary, .btn-primary, .btn-outline-primary:hover, .badge-primary {
@@ -692,4 +841,46 @@ iframe{
 }
 .btn:active{
     background-color: var(--main-color);
+}
+
+/*responsive */
+@media (min-width: 576px) { 
+    .navbar{
+        width: 100%;
+        padding: 2px;
+        margin: 0px 0px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+    .navbar-brand{
+        position: relative;
+        margin-top: 0;
+        padding-left: 2px;
+        margin-bottom: 10px;
+    }
+    .form-inline{
+        position: relative;
+        margin-top: 0px;
+        width: 100%;
+    }
+    
+}
+@media (max-width: 575.98px){
+    #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 108px;
+        padding-right: 15px !important;
+        padding-top: 1rem !important;
+    }
+    .sidebar-toggled #wrapper #content-wrapper .container-fluid {
+        padding-left: 15px;
+    }
+    .navbar-brand img {
+        vertical-align: top;
+   }
+   .sidebar{
+    display: none;
+   }
 }
