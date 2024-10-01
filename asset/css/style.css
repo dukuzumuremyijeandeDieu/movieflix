@@ -115,23 +115,59 @@ body{
     box-shadow: 0 0 0 .2rem rgb(189 56 56 / 25%);
 }
 .bottom-sidebar{
-    position: absolute;
+    position: fixed !important;
     width: 100%;
-    background-color: blue;
-    z-index: 10000;
+    background-color: var(--container-bg-color) !important;
+    z-index: 100;
     bottom: 0px;
-    display: none;
+    display: block;
+    float: right;
 }
-.bottom-navbar{
+.bottom-sidebar-container{
+    width: 100%;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    z-index: 300;
 }
-.nav-item{
-    display: inline;
-    justify-content: center;
+.bottom-sidebar .navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2px;
+}
+.bottom-sidebar .navbar-nav .bottom-nav-item{
     align-items: center;
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;
+}
+
+.bottom-sidebar .bottom-nav-item a i{
+    color: var(--text-color);
+    font-weight: 600;
+    display: block;
+    transition: color 0.3s;
+}
+
+.bottom-sidebar .bottom-nav-item a span{
+    color: var(--text-color);
+    font-weight: 500;
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: color 0.3s;
+}
+
+.bottom-nav-item.active a i,
+.bottom-nav-item.active a span,
+.bottom-nav-item:focus a i,
+.bottom-nav-item:focus a span {
+    color: var(--main-color); /* Green color for focus/active */
+}
+.nav-item a{
+    display: inline;
+    text-decoration: none;
 }
 .sidebar {
     width:85px !important;
@@ -220,14 +256,7 @@ body{
         font-size: 13px;
         margin: 0 0 0 11px;
    }
-    .sidebar .nav-item .dropdown-menu {
-        position: static !important;
-        margin: 0 1rem;
-        top: 0;
-   }
-    .sidebar .nav-item.dropdown .dropdown-toggle::after {
-        display: block;
-   }
+    
     .sidebar.toggled {
         overflow: visible;
         width: 90px !important;
@@ -631,9 +660,6 @@ iframe{
  .slider-btn .swiper-button-next {
    right: -20px;          /* Position to the right of container */
  }
- .image-slider-one{
-    
- }
 .big-image-slide-1{
     background-color: transparent;
     display: grid;
@@ -658,31 +684,6 @@ iframe{
     color: white;
   }
 
-  /* Image covering the card */
-  .card-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Make sure the image covers the card */
-    position: absolute; /* Position it absolutely within the container */
-    top: 0;
-    left: 0;
-    z-index: 0; /* Send the image to the back */
-  }
-
-  /* Content inside the card */
-  .card-content {
-    position: relative;
-    z-index: 1; /* Ensure content is above the image */
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Transparent background for readability */
-    border-radius: 0 0 15px 15px; /* Match border radius */
-  }
-
-  /* Card title */
-  /* .card-title {
-    font-size: 24px;
-    font-weight: bold;
-  } */
 
   /* Card description */
   .card-description {
@@ -717,6 +718,7 @@ iframe{
   }
   .card-img-overlay{
     position: absolute;
+    display: block;
     height: 100%;
     width: 50%;
     background: linear-gradient(90deg,black,transparent);
@@ -776,7 +778,14 @@ iframe{
     width: 100%;
     max-width: 500px;
   }
-
+.card-img-overlay .small-overlay{
+    top: 50px;
+    z-index: 300;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg,black,transparent);
+}
 /* btn change*/
 .bg-primary, .btn-primary, .btn-outline-primary:hover, .badge-primary {
     border-color: transparent !important;
@@ -844,43 +853,92 @@ iframe{
 }
 
 /*responsive */
-@media (min-width: 576px) { 
-    .navbar{
-        width: 100%;
-        padding: 2px;
-        margin: 0px 0px 0px 0px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5px;
-    }
-    .navbar-brand{
-        position: relative;
-        margin-top: 0;
-        padding-left: 2px;
-        margin-bottom: 10px;
-    }
-    .form-inline{
-        position: relative;
-        margin-top: 0px;
-        width: 100%;
-    }
-    
-}
+
 @media (max-width: 575.98px){
     #wrapper #content-wrapper .container-fluid {
         padding-bottom: 15px !important;
-        padding-left: 108px;
+        padding-left: 15px;
         padding-right: 15px !important;
         padding-top: 1rem !important;
+        background-color: ;
     }
-    .sidebar-toggled #wrapper #content-wrapper .container-fluid {
-        padding-left: 15px;
+    .navbar{
+        width: 100%;
+        height: 50px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+    }
+    .bottom-sidebar{
+        display: block;
     }
     .navbar-brand img {
         vertical-align: top;
    }
+   .navbar .form-inline{
+    display: none;
+   }
    .sidebar{
     display: none;
    }
+   .latest-action.box, .image-slider-one.box, .latest-horro.box,
+   .latest-drama.box, .latest-romance.box{
+    width: 100%;
+    padding: 0px 0px 0px 0px !important;
+    background-color: aqua;
+   }
+   .image-slider-one{
+    width: 100%;
+   }
+   .card-img-overlay,
+   .play-btn-container{
+    display: none;
+   }
+   .card-img-overlay .card-button{
+    display: none;
+   }
+   .card-img-overlay .small-overlay{
+    display: block;
+   }
+   .mySwiper-latest-action-slide{
+    width: 100%;
+   }
+   .latest-action-wrapper .card{
+    width: 100%;
+   }
+   .mySwiper-latest-action-slide{
+    background-color: transparent; 
+     display: grid;
+     grid-template-columns: repeat(1fr,1fr);
+     grid-auto-flow: column; 
+     white-space: nowrap;
+     overflow: auto;
+     background-color: yell ;
+     column-gap: 10px;
+    }
+   .latest-action-wrapper .card-body{
+    background-color: green;
+    height: 100px !important;
+    overflow: hidden;
+    margin-bottom: 0px;
+   }
+   .card-img-top {
+    height: 150px !important; 
+    object-fit: cover; 
+   }
+   .latest-action-wrapper .card-title a h5{
+    text-decoration: none;
+    color: var(--text-color);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: 40px;
+    background: yellow;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+   }
+
 }

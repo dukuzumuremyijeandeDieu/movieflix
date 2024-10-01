@@ -15,54 +15,41 @@
 // }
 
 /*sidebar*/
-let romanceSection = document.getElementById("romance-movie-section");
-let dramaSection = document.getElementById("drama-movie-section");
-let horroSection = document.getElementById("horro-movie-section");
-let actionSection = document.getElementById("action-movie-section");
-let allMovieSection = document.getElementById("all-movie-section");
+  // JavaScript to manage active state on click
+const items = document.querySelectorAll("li");
+items.forEach(item => {
+    item.addEventListener("click", () => {
+        items.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+    });
+});
+// Optionally add focus event to handle keyboard navigation
+items.forEach(item => {
+    item.addEventListener("focus", () => {
+        items.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+    });
+});
 
-let romanceMovieBtn = document.getElementById("rommance-movie-btn");
-let dramaMovieBtn = document.getElementById("drama-movie-btn");
-let horroMovieBtn = document.getElementById("horro-movie-btn");
-let actionMovieBtn = document.getElementById("action-movie-btn");
-let allMoviesBtn = document.getElementById("all-movie-btn");
+let currentIndex = 0;  // Current starting index of visible slides
+        const slidesToShow = 5; // Number of slides to show by default
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        const slides = document.querySelectorAll('.slide');
 
-romanceMovieBtn.addEventListener("click", function(){
-  romanceSection.style.display = "block";
-  dramaSection.style.display = "none";
-  horroSection.style.display = "none";
-  actionSection.style.display = "none";
-  allMovieSection.style.display = "none";
-})
-dramaMovieBtn.addEventListener("click", function(){
-  romanceSection.style.display = "none";
-  dramaSection.style.display = "block";
-  horroSection.style.display = "none";
-  actionSection.style.display = "none";
-  allMovieSection.style.display = "none";
-})
-horroMovieBtn.addEventListener("click", function(){
-  romanceSection.style.display = "none";
-  dramaSection.style.display = "none";
-  horroSection.style.display = "block";
-  actionSection.style.display = "none";
-  allMovieSection.style.display = "none";
-})
-actionMovieBtn.addEventListener("click", function(){
-  romanceSection.style.display = "none";
-  dramaSection.style.display = "none";
-  horroSection.style.display = "none";
-  actionSection.style.display = "block";
-  allMovieSection.style.display = "none";
-})
-allMoviesBtn.addEventListener("click", function(){
-  romanceSection.style.display = "none";
-  dramaSection.style.display = "none";
-  horroSection.style.display = "none";
-  actionSection.style.display = "none";
-  allMovieSection.style.display = "block";
-<<<<<<< HEAD
-})
-=======
-})
->>>>>>> b40bbb15b016b52d8cff3602b6ccd37521f939e3
+        // Function to slide left or right
+        function slide(direction) {
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].clientWidth + 10; // Get slide width + gap
+
+            // Calculate the max slide position based on the current number of visible slides
+            const maxIndex = totalSlides - slidesToShow;
+
+            if (direction === 'next' && currentIndex < maxIndex) {
+                currentIndex++;
+            } else if (direction === 'prev' && currentIndex > 0) {
+                currentIndex--;
+            }
+
+            // Move the slider wrapper by adjusting the transform property
+            sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
