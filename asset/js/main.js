@@ -31,25 +31,20 @@ items.forEach(item => {
     });
 });
 
-let currentIndex = 0;  // Current starting index of visible slides
-        const slidesToShow = 5; // Number of slides to show by default
-        const sliderWrapper = document.querySelector('.slider-wrapper');
-        const slides = document.querySelectorAll('.slide');
+//search btn to show form for search
+document.addEventListener("DOMContentLoaded", function () {
+    const searchIcon = document.querySelector(".search-icon");
+    const searchContainer = document.getElementById("top-mobile-search");
 
-        // Function to slide left or right
-        function slide(direction) {
-            const totalSlides = slides.length;
-            const slideWidth = slides[0].clientWidth + 10; // Get slide width + gap
+    // Toggle the search form when the search icon is clicked
+    searchIcon.addEventListener("click", function () {
+        searchContainer.style.display = searchContainer.style.display === "none" ? "block" : "none";
+    });
 
-            // Calculate the max slide position based on the current number of visible slides
-            const maxIndex = totalSlides - slidesToShow;
-
-            if (direction === 'next' && currentIndex < maxIndex) {
-                currentIndex++;
-            } else if (direction === 'prev' && currentIndex > 0) {
-                currentIndex--;
-            }
-
-            // Move the slider wrapper by adjusting the transform property
-            sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    // Hide the search form if clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!searchContainer.contains(event.target) && !searchIcon.contains(event.target)) {
+            searchContainer.style.display = "none";
         }
+    });
+});
