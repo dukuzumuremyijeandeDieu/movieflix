@@ -860,7 +860,6 @@ iframe{
         padding-left: 15px;
         padding-right: 15px !important;
         padding-top: 1rem !important;
-        background-color: ;
     }
     .navbar{
         width: 100%;
@@ -884,7 +883,6 @@ iframe{
    .latest-drama.box, .latest-romance.box{
     width: 100%;
     padding: 0px 0px 0px 0px !important;
-    background-color: aqua;
    }
    .image-slider-one{
     width: 100%;
@@ -899,10 +897,12 @@ iframe{
    .card-img-overlay .small-overlay{
     display: block;
    }
-   .mySwiper-latest-action-slide{
+   .mySwiper-latest-action-slide, .mySwiper-latest-horro-slide, .mySwiper-latest-drama-slide, 
+   .mySwiper-latest-romance-slide{
     width: 100%;
    }
-   .latest-action-wrapper .card{
+   .latest-action-wrapper .card, .latest-horro-wrapper .card, .latest-drama-wrapper .card,
+   .latest-romance-wrapper .card{
     width: 100%;
    }
    .mySwiper-latest-action-slide{
@@ -915,32 +915,33 @@ iframe{
      background-color: yell ;
      column-gap: 10px;
     }
-   .latest-action-wrapper .card-body{
-    background-color: transparent;
-    height: 100px !important;
-    overflow: hidden;
-    margin-bottom: 0px;
-   }
-   .card-img-top {
-    height: 150px !important; 
-    object-fit: cover; 
-   }
-   .latest-action-wrapper .card-body .card-title h5{
-    /* max-height: 74px;
-    text-decoration: none;
-    color: var(--text-color);
-    text-overflow: ellipsis;
-    overflow: hidden;
-    bottom: 0;
-    display: -webkit-box;
-    -webkit-box-orient: horizontal;
-    -webkit-line-clamp: 2; 
-    position: relative;
-    width: 100%; */
-   }
-   .h5, h5 {
-    font-size: 16px;
-    font-weight: 600;
-   }
+   
+    .card-title {
+     text-decoration: none;
+     color: var(--text-color);
+     text-overflow: ellipsis;
+     overflow: hidden;
+     bottom: 0;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+     max-height: 50px;
+     height: 100%;
+     width: 100%;
+    }
+    .card-body {
+     -ms-flex: 1 1 auto;
+     flex: 1 1 auto;
+     min-height: 1px;
+     padding: 1.25rem;
+} 
+    .card-img-top {
+     height: 150px !important; 
+     object-fit: cover; 
+    }
+    .h5, h5 {
+     font-size: 16px;
+     font-weight: 600;
+    }
 
 }

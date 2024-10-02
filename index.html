@@ -496,7 +496,7 @@
             </div>
             <div class="col-md-12">
                     <div class="swiper mySwiper-latest-drama-slide">
-                      <div class="swiper-wrapper">
+                      <div class="swiper-wrapper latest-drama-wrapper">
                         <div class="swiper-slide">
                           <div class="item">
                             <div class="card">
@@ -637,7 +637,7 @@
             </div>
             <div class="col-md-12">
                     <div class="swiper mySwiper-latest-romance-slide">
-                      <div class="swiper-wrapper">
+                      <div class="swiper-wrapper latest-romance-wrapper">
                         <div class="swiper-slide">
                           <div class="item">
                             <div class="card">
@@ -823,7 +823,7 @@
       },
     });
     var swiper = new Swiper(".mySwiper-latest-horro-slide", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
       pagination: {
         el: ".swiper-pagination",
@@ -834,8 +834,20 @@
         prevEl: ".swiper-button-prev-2",
       },
       breakpoints: {
-        640: {
+        280:{
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320:{
           slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        575:{
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 4,
           spaceBetween: 20,
         },
         768: {
@@ -845,7 +857,7 @@
         1024: {
           slidesPerView: 5,
           spaceBetween: 50,
-        },
+        }, 
       },
     });
     var swiper = new Swiper(".mySwiper-latest-drama-slide", {
@@ -860,8 +872,20 @@
         prevEl: ".swiper-button-prev-3",
       },
       breakpoints: {
-        640: {
+        280:{
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320:{
           slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        575:{
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 4,
           spaceBetween: 20,
         },
         768: {
@@ -871,7 +895,7 @@
         1024: {
           slidesPerView: 5,
           spaceBetween: 50,
-        },
+        }, 
       },
     });
     var swiper = new Swiper(".mySwiper-latest-romance-slide", {
@@ -886,8 +910,20 @@
         prevEl: ".swiper-button-prev-4",
       },
       breakpoints: {
-        640: {
+        280:{
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320:{
           slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        575:{
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 4,
           spaceBetween: 20,
         },
         768: {
@@ -897,7 +933,7 @@
         1024: {
           slidesPerView: 5,
           spaceBetween: 50,
-        },
+        }, 
       },
     });
     var swiper = new Swiper(".mySwiper-slide-1", {
@@ -909,31 +945,43 @@
       },
       
       breakpoints: {
-        640: {
+        280:{
           slidesPerView: 1,
           spaceBetween: 10,
         },
-        768: {
+        320:{
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        575:{
           slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 4,
           spaceBetween: 20,
         },
-        1024: {
-          slidesPerView: 2,
+        768: {
+          slidesPerView: 4,
           spaceBetween: 40,
         },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        }, 
       },
     });
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 2, // Display 2 slides at a time
-      spaceBetween: 20, // Space between slides
-      breakpoints: {
-        // When window width is <= 768px (small screens)
-        768: {
-          slidesPerView: 1, // Show only 1 slide at a time
-        }
-      },
-      loop: true, // Enable looping of slides
-    });
+    //var swiper = new Swiper('.swiper-container', {
+    //  slidesPerView: 2, // Display 2 slides at a time
+    //  spaceBetween: 20, // Space between slides
+    //  breakpoints: {
+    //    // When window width is <= 768px (small screens)
+    //    768: {
+    //      slidesPerView: 1, // Show only 1 slide at a time
+    //    }
+    //  },
+    //  loop: true, // Enable looping of slides
+    //});
     var swiper = new Swiper(".mySwiper", {
       autoplay: {
         delay: 3000,
