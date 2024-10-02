@@ -854,7 +854,7 @@ iframe{
 
 /*responsive */
 
-@media (max-width: 575.98px){
+@media (max-width: 576px){
     #wrapper #content-wrapper .container-fluid {
         padding-bottom: 15px !important;
         padding-left: 15px;
@@ -916,7 +916,7 @@ iframe{
      column-gap: 10px;
     }
    .latest-action-wrapper .card-body{
-    background-color: green;
+    background-color: transparent;
     height: 100px !important;
     overflow: hidden;
     margin-bottom: 0px;
@@ -925,20 +925,22 @@ iframe{
     height: 150px !important; 
     object-fit: cover; 
    }
-   .latest-action-wrapper .card-title a h5{
+   .latest-action-wrapper .card-body .card-title h5{
+    /* max-height: 74px;
     text-decoration: none;
     color: var(--text-color);
     text-overflow: ellipsis;
     overflow: hidden;
     bottom: 0;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    max-height: 40px;
-    background: yellow;
-    height: 100%;
-    width: 100%;
-    font-size: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-line-clamp: 2; 
+    position: relative;
+    width: 100%; */
+   }
+   .h5, h5 {
+    font-size: 16px;
+    font-weight: 600;
    }
 
 }
