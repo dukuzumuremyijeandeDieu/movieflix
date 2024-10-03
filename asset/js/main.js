@@ -32,19 +32,45 @@ items.forEach(item => {
 });
 
 //search btn to show form for search
-document.addEventListener("DOMContentLoaded", function () {
-    const searchIcon = document.querySelector(".search-icon");
-    const searchContainer = document.getElementById("top-mobile-search");
+//(function () {
+//    document.addEventListener("DOMContentLoaded", function () {
+//        const findIcon = document.getElementById("find");
+//        const findContainer = document.getElementById("top-mobile-search");
+//
+//        // Toggle the search form when the search icon is clicked
+//        findIcon.addEventListener("click", function (event) {
+//            // Prevent event propagation to ensure click event does not trigger the document listener
+//            event.stopPropagation();
+//            findContainer.style.display = findContainer.style.display === "none" ? "block" : "none";
+//        });
+//
+//        // Hide the search form if clicking outside of it
+//        document.addEventListener("click", function (event) {
+//            // Check if the clicked element is outside the search container and search icon
+//            if (!findContainer.contains(event.target) && !findIcon.contains(event.target)) {
+//                findContainer.style.display = "none";
+//            }
+//        });
+//    });
+//})();
 
-    // Toggle the search form when the search icon is clicked
-    searchIcon.addEventListener("click", function () {
-        searchContainer.style.display = searchContainer.style.display === "none" ? "block" : "none";
-    });
+// Get the icon and hidden content elements
+const toggleIcon = document.getElementById('toggled-icon');
+const hiddenContent = document.getElementById('top-mobile-search');
 
-    // Hide the search form if clicking outside of it
-    document.addEventListener("click", function (event) {
-        if (!searchContainer.contains(event.target) && !searchIcon.contains(event.target)) {
-            searchContainer.style.display = "none";
-        }
-    });
+// Function to toggle the visibility of the hidden content
+toggleIcon.addEventListener('click', function (event) {
+    // Toggle display property between 'block' and 'none'
+    hiddenContent.style.display = hiddenContent.style.display === 'block' ? 'none' : 'block';
+
+    // Stop event propagation to avoid triggering the document click event
+    event.stopPropagation();
+});
+
+// Hide hidden content when clicking outside of it
+document.addEventListener('click', function (event) {
+    // Check if the click is outside the hidden content and the toggle icon
+    if (!hiddenContent.contains(event.target) && !toggleIcon.contains(event.target)) {
+        hiddenContent.style.display = 'none';
+    }
 });

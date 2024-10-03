@@ -55,10 +55,11 @@ html{
     width: 100%;
     height: 50px;
     display: flex;
-    z-index: 30;
+    z-index: 40;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--border-color); 
+    border-bottom: 2px solid var(--border-color);
+    overflow: hidden; 
 }
 .logo{
     margin-top: -13px;
@@ -79,8 +80,9 @@ html{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-right: 20px;
 }
-.right-container i{
+.right-container .toggled-icon{
     display: none;
 }
 .user-profile{
@@ -95,11 +97,12 @@ html{
     margin-top: -10px !important;
 }
 .form-control{
-    background-color: var(--background-color) !important;
+    background-color: var(--container-bg-color) !important;
     border: none;
     caret-color: var(--main-color);
     color: var(--text-color) !important;
     cursor: pointer;
+    border: 1px solid var(--main-color);
 }
 .form-control:focus{
     background-color: var(--background-color);
@@ -133,17 +136,19 @@ html{
     position: fixed !important;
     width: 100%;
     background-color: var(--container-bg-color) !important;
-    z-index: 30;
+    z-index: 40;
     bottom: 0px;
     display: block;
     float: right;
+
 }
 .bottom-sidebar-container{
     width: 100%;
     position: relative;
-    z-index: 20;
+    
 }
 .bottom-sidebar .navbar-nav{
+    position: static;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -313,10 +318,15 @@ html{
 }
 .top-mobile-search {
     display: none;
-    z-index: 30;
-    margin-top: 10px;
+    z-index: 10;
     width: 100%;
-    position: relative;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 15px;
+    user-select: none;
+}
+.top-mobile-search {
+    position: fixed !important;
 }
 .mobile-search{
     width: 100%;
@@ -330,12 +340,7 @@ html{
 .image-slider-one{
     position: relative;
 }
-/* .content-wrapper{
-    width: 90%;
-    background-color: green !important;
-    min-height: 100vh;
-    position: relative;
-} */
+
 .movie-section{
     width: 100%;
     position: relative;
@@ -887,17 +892,17 @@ iframe{
         padding-bottom: 15px !important;
         padding-left: 15px;
         padding-right: 15px !important;
-        padding-top: 1.5rem !important;
+        padding-top: 1.8rem !important;
     }
     .navbar{
         width: 100%;
         height: 50px;
-        background-color: #000 !important;
         position: fixed; 
         padding: 0px !important;
     }
-    .right-container i{
+    .right-container .toggled-icon{
         display: block;
+        position: relative;
     }
     .navbar .form-inline{
         display: none;
@@ -995,6 +1000,130 @@ iframe{
     .input-group{
         width: 100%;
     }
-
-
+    .top-mobile-search {
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .top-mobile-search {
+        display: none;
+    }
+    #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 108px;
+        padding-right: 15px !important;
+        padding-top: 1.8rem !important;
+    }
+    .container {
+        max-width: 100%;
+     }
+     .navbar{
+        width: 100%;
+        height: 50px;
+        position: fixed; 
+        padding: 0px !important;
+    }
+    .right-container .toggled-icon{
+        display: block;
+        position: relative;
+    }
+    .navbar .form-inline{
+        display: none;
+    }
+    .bottom-sidebar{
+        display: block;
+    }
+    .navbar-brand img {
+        vertical-align: top;
+   }
+   .sidebar{
+    display: none;
+   }
+   .latest-action.box, .image-slider-one.box, .latest-horro.box,
+   .latest-drama.box, .latest-romance.box{
+    width: 100%;
+    padding: 0px 0px 0px 0px !important;
+   }
+   .image-slider-one{
+    width: 100%;
+   }
+   .card-img-overlay,
+   .play-btn-container{
+    display: none;
+   }
+   .card-img-overlay .card-button{
+    display: none;
+   }
+   .card-img-overlay .small-overlay{
+    display: block;
+   }
+   .mySwiper-latest-action-slide, .mySwiper-latest-horro-slide, .mySwiper-latest-drama-slide, 
+   .mySwiper-latest-romance-slide{
+    width: 100%;
+   }
+   .latest-action-wrapper .card, .latest-horro-wrapper .card, .latest-drama-wrapper .card,
+   .latest-romance-wrapper .card{
+    width: 100%;
+   }
+    .card-title {
+     text-decoration: none;
+     color: var(--text-color);
+     text-overflow: ellipsis;
+     overflow: hidden;
+     bottom: 0;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+     max-height: 50px;
+     height: 100%;
+     width: 100%;
+    }
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 0.25rem;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 155px !important; 
+        object-fit: cover; 
+        object-position: left;
+        -o-object-fit: cover;
+        -o-object-position: left;
+    }
+    .h5, h5 {
+     font-size: 16px;
+     font-weight: 600;
+    }
+    .slider-btn .swiper-button-prev::after,
+    .slider-btn .swiper-button-next::after{
+    font-size: 18px !important;
+    font-weight: 800;
+    }
+   .slider-btn .swiper-button-prev,
+   .slider-btn .swiper-button-next {
+     width: 30px;
+     height: 30px;
+     border: 2px solid var(--main-color);
+     padding: 2px;
+   }
+   .card .time {
+    top: 128px !important;
+    right: 4px;
+    position: absolute;
+    }
+    .card .time span {
+        color: var(--text-color);
+        background-color: var(--main-color);
+        padding: 2px 2px;
+        border-radius: var(--border-raduis);
+        position: static;
+    }
+    .input-group{
+        width: 100%;
+    }
+    .top-mobile-search {
+        display: none;
+    }
 }
