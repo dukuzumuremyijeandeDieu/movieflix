@@ -99,13 +99,15 @@ html{
 .navbar .form-inline{
     margin-top: -10px !important;
 }
+.top-mobile-search .form-control{
+    border: 1px solid var(--main-color);
+}
 .form-control{
-    background-color: var(--container-bg-color) !important;
+    background-color: var(--background-color) !important;
     border: none;
     caret-color: var(--main-color);
     color: var(--text-color) !important;
     cursor: pointer;
-    border: 1px solid var(--main-color);
 }
 .form-control:focus{
     background-color: var(--background-color);
@@ -374,7 +376,9 @@ html{
     background-color: var(--main-color);
     margin: 0px 0 16px;
 }
-
+.image-slider-one.box{
+    background-color: transparent !important;
+}
 /* card*/
 .movies-container{
     display: grid;
@@ -392,6 +396,18 @@ html{
 
 .card:hover .play-icon{
     display: block;
+}
+.card>.play-icon{
+    width: 100%;
+    height: 58%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    display: none;
 }
 .card>.play-icon{
     width: 100%;
@@ -1215,6 +1231,12 @@ iframe{
     .top-mobile-search {
         display: none;
     }
+    .watch-page .box{
+        display: block;
+    }
+    .watch-page.box{
+        background-color: var(--container-bg-color);
+    }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
     #wrapper #content-wrapper .container-fluid {
@@ -1342,6 +1364,18 @@ iframe{
       .navbar .form-inline{
         margin-top: -2px !important;
     }
+    .movies-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 10px;
+        column-gap: 2px;
+    }
+    .card:hover .play-icon{
+        display: none;
+    }
+    .watch-page .box{
+        background-color: var(--container-bg-color) !important;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
     #wrapper #content-wrapper .container-fluid {
@@ -1391,6 +1425,15 @@ iframe{
     .card .time {
         top: 123px !important;
     }
+    .movies-container{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        row-gap: 10px;
+        column-gap: 2px;
+    }
+    .single-video-title.box{
+        background-color: var(--container-bg-color);
+    }
     
 }
 @media (min-width: 1200px) and (max-width: 2560px){
@@ -1398,15 +1441,23 @@ iframe{
         display: none;
     }
     .box{
-        background-color: transparent !important;
+        
+    }
+    .single-video-title.box{
+        background-color: var(--container-bg-color);
+    }
+    .single-video-title.box{
+        background-color: var(--container-bg-color);
     }
 }
 @media (max-width: 2560px) {
    
-    .box{
-        background-color: transparent !important;
+    .single-video-title .box{
+        background-color: var(--container-bg-color);
     }
     .card{
         width: 100%;
     }
+    
+    
 }
