@@ -33,6 +33,9 @@ html{
 #wrapper #content-wrapper .container-fluid{
     padding: 30px 30px 30px 255px;
 }
+.index #wrapper #content-wrapper .container-fluid{
+    padding: 30px 30px 30px 30px;
+}
 .sidebar-toggled #wrapper #content-wrapper .container-fluid{
     padding: 30px 30px 30px 121px;
 }
@@ -123,7 +126,6 @@ html{
     color: var(--text-color);
 }
 .btn:focus{
-    
     outline: none;
     border-color: none;
 }
@@ -138,7 +140,7 @@ html{
     background-color: var(--container-bg-color) !important;
     z-index: 40;
     bottom: 0px;
-    display: block;
+    display: none;
     float: right;
 
 }
@@ -347,9 +349,7 @@ html{
 }
 .movie-selection{
     width: 100%;
-    border: 1px solid var(--border-color);
-    background-color: var(--container-bg-color);
-    border-radius: var(--border-raduis);
+    background-color: transparent;
     position: relative;
 }
 .selection{
@@ -379,7 +379,7 @@ html{
 .movies-container{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    row-gap: 3px;
+    row-gap: 10px;
     column-gap: 2px;
 }
 .card{
@@ -422,6 +422,7 @@ html{
     width: 100%;
     height: 100px;
     object-fit: cover;
+    object-position: center;
 }
 .card-body{
     width: 100%;
@@ -532,6 +533,7 @@ iframe{
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center;
 }
 /*video*/
 .video-card-image {
@@ -559,6 +561,7 @@ iframe{
     height: 100%;
     position: relative;
     object-fit: cover;
+    object-position: center;
 }
 .video-card-image .play-icon {
     opacity: 0;
@@ -736,6 +739,7 @@ iframe{
     height: 100%;
     position: relative;
     object-fit: cover;
+    object-position: center;
   }
   .swiper-container {
     width: 50%; /* Set each slide to 50% of container width */
@@ -884,11 +888,44 @@ iframe{
 .btn:active{
     background-color: var(--main-color);
 }
+.selection .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--main-color) !important;
+}
+.nav-pills .nav-link {
+    background-color: var(--container-bg-color);
+    border-radius: var(--border-raduis) !important;
+}
 
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    gap: 10px;
+    overflow: -moz-scrollbars-none; /* For Firefox */
+    -ms-overflow-style: none;       /* For Internet Explorer and Edge */
+    scrollbar-width: none;          /* For Firefox */
+    overflow: scroll;  
+}
+.nav-item a {
+    display: inline;
+    text-decoration: none;
+    color: white;
+}
 /*responsive */
 
 @media (max-width: 576px){
     #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 15px;
+        padding-right: 15px !important;
+        padding-top: 1.8rem !important;
+    }
+    .index #wrapper #content-wrapper .container-fluid {
         padding-bottom: 15px !important;
         padding-left: 15px;
         padding-right: 15px !important;
@@ -909,6 +946,9 @@ iframe{
     }
     .bottom-sidebar{
         display: block;
+    }
+    .index .bottom-sidebar{
+        display: none;
     }
     .navbar-brand img {
         vertical-align: top;
@@ -965,9 +1005,181 @@ iframe{
         width: 100%;
         height: 155px !important; 
         object-fit: cover; 
-        object-position: left;
+        object-position: center;
         -o-object-fit: cover;
-        -o-object-position: left;
+        -o-object-position: center;
+    }
+    .h5, h5 {
+     font-size: 16px;
+     font-weight: 600;
+    }
+    .slider-btn .swiper-button-prev::after,
+    .slider-btn .swiper-button-next::after{
+    font-size: 15px !important;
+    font-weight: 800;
+    }
+   .slider-btn .swiper-button-prev,
+   .slider-btn .swiper-button-next {
+     width: 25px;
+     height: 25px;
+     border: 2px solid var(--main-color);
+     padding: 2px;
+   }
+   .card .time {
+    top: 128px !important;
+    right: 4px;
+    position: absolute;
+    }
+    .card .time span {
+        color: var(--text-color);
+        background-color: var(--main-color);
+        padding: 2px 2px;
+        border-radius: var(--border-raduis);
+        position: static;
+    }
+    .input-group{
+        width: 100%;
+    }
+    .top-mobile-search {
+        display: none;
+    }
+    .selection {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        position: relative;
+        padding-left: 0px !important;
+        margin-top: 2px !important;
+    }
+    .nav-item a {
+        display: inline;
+        text-decoration: none;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+    .movies-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 10px;
+        column-gap: 3px;
+    }
+    .movies-container .card{
+        width: 100%;
+    }
+    .movies-container .card-body .card-title{
+        max-height: 41px;
+    }
+    .card:hover .play-icon {
+        display: none;
+    }
+    .card-img-top{
+        object-position: center;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .top-mobile-search {
+        display: none;
+    }
+    #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 13px;
+        padding-right: 15px !important;
+        padding-top: 1.8rem !important;
+    }
+    .index #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 13px;
+        padding-right: 15px !important;
+        padding-top: 1.8rem !important;
+    }
+    .container {
+        max-width: 100%;
+     }
+     .navbar{
+        width: 100%;
+        height: 50px;
+        position: fixed; 
+        padding: 0px !important;
+    }
+    .right-container .toggled-icon{
+        display: block;
+        position: relative;
+    }
+    .navbar .form-inline{
+        display: none;
+    }
+    .bottom-sidebar{
+        display: block;
+    }
+    .navbar-brand img {
+        vertical-align: top;
+   }
+   .sidebar{
+    display: none;
+   }
+   .latest-action.box, .image-slider-one.box, .latest-horro.box,
+   .latest-drama.box, .latest-romance.box{
+    width: 100%;
+    padding: 0px 0px 0px 0px !important;
+   }
+   .mySwiper-latest-action-slide, .mySwiper-latest-horro-slide, .mySwiper-latest-drama-slide, 
+   .mySwiper-latest-romance-slide{
+    width: 100%;
+   }
+   
+   .latest-action-wrapper .card, .latest-horro-wrapper .card, .latest-drama-wrapper .card,
+   .latest-romance-wrapper .card{
+    width: auto;
+   }
+   .image-slider-one{
+    width: 100%;
+   }
+   .card-img-overlay,
+   .play-btn-container{
+    display: none;
+   }
+   .card-img-overlay .card-button{
+    display: none;
+   }
+   .card-img-overlay .small-overlay{
+    display: block;
+   }
+   .mySwiper-latest-action-slide, .mySwiper-latest-horro-slide, .mySwiper-latest-drama-slide, 
+   .mySwiper-latest-romance-slide{
+    width: 100%;
+   }
+   .latest-action-wrapper .card, .latest-horro-wrapper .card, .latest-drama-wrapper .card,
+   .latest-romance-wrapper .card{
+    width: auto;
+   }
+    .card-title {
+     text-decoration: none;
+     color: var(--text-color);
+     text-overflow: ellipsis;
+     overflow: hidden;
+     bottom: 0;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+     max-height: 50px;
+     height: 100%;
+     width: 100%;
+    }
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 0.25rem;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 155px !important; 
+        object-fit: cover; 
+        object-position: center;
+        -o-object-fit: cover;
+        -o-object-position: center;
     }
     .h5, h5 {
      font-size: 16px;
@@ -1004,79 +1216,59 @@ iframe{
         display: none;
     }
 }
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .top-mobile-search {
-        display: none;
-    }
+@media (min-width: 768px) and (max-width: 991.98px) {
     #wrapper #content-wrapper .container-fluid {
         padding-bottom: 15px !important;
         padding-left: 13px;
         padding-right: 15px !important;
-        padding-top: 1.8rem !important;
+        padding-top: 4rem !important;
     }
-    .container {
-        max-width: 100%;
-     }
-     .navbar{
-        width: 100%;
-        height: 50px;
-        position: fixed; 
-        padding: 0px !important;
+    .index #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 13px;
+        padding-right: 15px !important;
+        padding-top: 4rem !important;
     }
-    .right-container .toggled-icon{
-        display: block;
-        position: relative;
+    .sidebar .nav-item .nav-link {
+        padding: 8px 14px !important;
     }
-    .navbar .form-inline{
-        display: none;
+    .navbar-brand img {
+         vertical-align: top;
+    }
+    .sidebar{
+    display: none;
     }
     .bottom-sidebar{
         display: block;
     }
-    .navbar-brand img {
-        vertical-align: top;
-   }
-   .sidebar{
-    display: none;
-   }
    .latest-action.box, .image-slider-one.box, .latest-horro.box,
    .latest-drama.box, .latest-romance.box{
     width: 100%;
     padding: 0px 0px 0px 0px !important;
-   }
-   .image-slider-one{
-    width: 100%;
-   }
-   .card-img-overlay,
-   .play-btn-container{
-    display: none;
-   }
-   .card-img-overlay .card-button{
-    display: none;
-   }
-   .card-img-overlay .small-overlay{
-    display: block;
-   }
-   .mySwiper-latest-action-slide, .mySwiper-latest-horro-slide, .mySwiper-latest-drama-slide, 
-   .mySwiper-latest-romance-slide{
-    width: 100%;
-   }
-   .latest-action-wrapper .card, .latest-horro-wrapper .card, .latest-drama-wrapper .card,
-   .latest-romance-wrapper .card{
-    width: 100%;
-   }
-    .card-title {
-     text-decoration: none;
-     color: var(--text-color);
-     text-overflow: ellipsis;
-     overflow: hidden;
-     bottom: 0;
-     display: -webkit-box;
-     -webkit-box-orient: vertical;
-     -webkit-line-clamp: 2;
-     max-height: 50px;
-     height: 100%;
-     width: 100%;
+    }
+     .video-card-image img {
+         width: 100%;
+    }
+    .container {
+         max-width: 100%;
+    }
+    .top-mobile-search {
+        display: none;
+    }
+    .card .time span {
+        color: var(--text-color);
+        background-color: var(--main-color);
+        padding: 2px 2px;
+        border-radius: var(--border-raduis);
+        position: static;
+    }
+    
+    .card {
+        width: auto;
+        height: auto;
+        padding: 0 !important;
+        background-color: var(--container-bg-color);
+        text-decoration: none;
     }
     .card-body {
         -ms-flex: 1 1 auto;
@@ -1084,17 +1276,8 @@ iframe{
         min-height: 1px;
         padding: 0.25rem;
     }
-    .card-img-top {
-        width: 100%;
-        height: 155px !important; 
-        object-fit: cover; 
-        object-position: left;
-        -o-object-fit: cover;
-        -o-object-position: left;
-    }
-    .h5, h5 {
-     font-size: 16px;
-     font-weight: 600;
+    .card .time {
+        top: 123px;
     }
     .slider-btn .swiper-button-prev::after,
     .slider-btn .swiper-button-next::after{
@@ -1108,22 +1291,122 @@ iframe{
      border: 2px solid var(--main-color);
      padding: 2px;
    }
-   .card .time {
-    top: 128px !important;
-    right: 4px;
-    position: absolute;
+   .mt-4, .my-4 {
+    margin-top: 0.5rem !important;
+   }
+   .play-btn {
+    right: 69px;
+    top: 39%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255 0 0 / 17%);
     }
-    .card .time span {
+    .card-img-overlay .card-title {
+        margin-top: -17px;
+        text-decoration: none;
         color: var(--text-color);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        bottom: 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        max-height: 74px;
+
+    }
+    .play-btn a:hover{
         background-color: var(--main-color);
-        padding: 2px 2px;
-        border-radius: var(--border-raduis);
-        position: static;
-    }
-    .input-group{
+        transition: all ease 0.3s;
+      }
+      .main-play-icon i{
+        font-size: 35px;
+        color: var(--text-color);
+      }
+      .play-btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
         width: 100%;
+        max-width: 500px;
+      }
+      .play-btn .main-play-icon{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--border-raduis-img);
+        transition: all ease 0.3s;
+      }
+      .navbar .form-inline{
+        margin-top: -2px !important;
     }
-    .top-mobile-search {
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 243px;
+        padding-right: 15px !important;
+        padding-top: 3rem !important;
+    }
+    #wrapper #content-wrapper .container-fluid {
+        padding-bottom: 15px !important;
+        padding-left: 243px;
+        padding-right: 15px !important;
+        padding-top: 3rem !important;
+    }
+    .latest-action.box, .image-slider-one.box, .latest-horro.box,
+   .latest-drama.box, .latest-romance.box{
+     background-color: transparent !important;
+   }
+   .card-img-overlay .card-title {
+    margin-top: -17px;
+    text-decoration: none;
+    color: var(--text-color);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 74px;
+    }
+    .bottom-sidebar{
         display: none;
+    }
+    .card {
+        width: auto;
+        height: auto;
+        padding: 0 !important;
+        background-color: var(--container-bg-color);
+        text-decoration: none;
+    }
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 0.25rem;
+    }
+    .card .time {
+        top: 123px !important;
+    }
+    
+}
+@media (min-width: 1200px) and (max-width: 2560px){
+    .bottom-sidebar {
+        display: none;
+    }
+    .box{
+        background-color: transparent !important;
+    }
+}
+@media (max-width: 2560px) {
+   
+    .box{
+        background-color: transparent !important;
+    }
+    .card{
+        width: 100%;
     }
 }
