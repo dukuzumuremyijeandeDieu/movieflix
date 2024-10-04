@@ -933,7 +933,8 @@ iframe{
     color: white;
 }
 /*responsive */
-
+/* Mobile Media */
+/* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 576px){
     #wrapper #content-wrapper .container-fluid {
         padding-bottom: 15px !important;
@@ -1093,7 +1094,22 @@ iframe{
     .card-img-top{
         object-position: center;
     }
+    .single-video-title .download {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 2px 4px;
+        background-color: var(--main-color);
+        border-radius: var(--border-raduis);
+        position: static;
+        width: 76px;
+        height: 29px;
+    }
+    .video-card:hover .play-icon{
+        display: none;
+    }
+
 }
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .top-mobile-search {
         display: none;
@@ -1231,13 +1247,22 @@ iframe{
     .top-mobile-search {
         display: none;
     }
-    .watch-page .box{
-        display: block;
+    
+    .single-video-title .download {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 2px 4px;
+        background-color: var(--main-color);
+        border-radius: var(--border-raduis);
+        position: static;
+        width: 76px;
+        height: 29px;
     }
-    .watch-page.box{
-        background-color: var(--container-bg-color);
+    .video-card:hover .play-icon{
+        display: none;
     }
 }
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     #wrapper #content-wrapper .container-fluid {
         padding-bottom: 15px !important;
@@ -1267,6 +1292,15 @@ iframe{
    .latest-drama.box, .latest-romance.box{
     width: 100%;
     padding: 0px 0px 0px 0px !important;
+    }
+    .video-card-list .video-card-image {
+        float: left;
+        height: 140px;
+        margin: 0 7px 0 0;
+        width: 138px ;
+    }
+    .video-card:hover .play-icon{
+        display: none;
     }
      .video-card-image img {
          width: 100%;
@@ -1376,7 +1410,18 @@ iframe{
     .watch-page .box{
         background-color: var(--container-bg-color) !important;
     }
+    .single-video-title .download {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 2px 4px;
+        background-color: var(--main-color);
+        border-radius: var(--border-raduis);
+        position: static;
+        width: 76px;
+        height: 29px;
+    }
 }
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     #wrapper #content-wrapper .container-fluid {
         padding-bottom: 15px !important;
@@ -1434,8 +1479,28 @@ iframe{
     .single-video-title.box{
         background-color: var(--container-bg-color);
     }
+    .single-video-title .download {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 2px 4px;
+        background-color: var(--main-color);
+        border-radius: var(--border-raduis);
+        position: static;
+        width: 76px;
+        height: 29px;
+    }
+    .video-card-image img {
+        width: 100%;
+   }
+   .video-card-list .video-card-image {
+    float: left;
+    height: 140px;
+    margin: 0 7px 0 0;
+    width: 138px ;
+}
     
 }
+/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 2560px){
     .bottom-sidebar {
         display: none;
