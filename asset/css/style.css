@@ -45,7 +45,47 @@ html{
 .text-white{
     color: var(--text-color);
 }
+.text-red{
+    color: var(--main-color);
+}
+.scroll-to-top {
+    background: #343434 none repeat scroll 0 0;
+    border-radius: 70px !important;
+    bottom: 98px;
+    color: var(--text-color);
+    display: none;
+    height: 50px;
+    line-height: 46px;
+    position: fixed;
+    right: 15px;
+    text-align: center;
+    width: 50px;
+    z-index: 36;
+}
 
+.scroll-to-top:focus, .scroll-to-top:hover {
+    color: white;
+}
+.scroll-to-top:hover {
+    background: var(--main-color);
+}
+.scroll-to-top i {
+    font-weight: 800;
+}
+.social-icon{
+    background: #343434 none repeat scroll 0 0;
+    border-radius: 70px !important;
+    bottom: 98px;
+    color: var(--text-color);
+    display: block;
+    height: 50px;
+    line-height: 46px;
+    position: fixed;
+    left: 265px;
+    text-align: center;
+    width: 50px;
+    z-index: 46;
+}
 .selector-for-some-widget {
     box-sizing: content-box;
 }
@@ -62,7 +102,6 @@ html{
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid var(--border-color);
-    overflow: hidden; 
 }
 .logo{
     margin-top: -13px;
@@ -77,13 +116,11 @@ html{
     object-fit: cover;
 }
 .right-container{
-    margin-top: -13px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-right: 20px;
 }
 .right-container .toggled-icon{
     display: none;
@@ -192,6 +229,69 @@ html{
 .nav-item a{
     display: inline;
     text-decoration: none;
+}
+.user-dropdown-link img {
+    border-radius: 50px;
+    height: 30px;
+    margin: -9px 2px -6px 0;
+    width: 30px;
+} .navbar-nav .nav-item.dropdown .dropdown-toggle::after {
+    width: 1rem;
+    text-align: center;
+    float: right;
+    vertical-align: 0;
+    border: 0;
+    font-weight: 900;
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+}
+.navbar-nav .nav-item.dropdown.show .dropdown-toggle::after {
+    content: '\f107';
+}
+.navbar-nav .nav-item.dropdown.no-arrow .dropdown-toggle::after {
+    display: none;
+}
+.dropdown-toggle::after {
+    display: none; 
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid ;
+    border-bottom: 0;
+    border-left: .3em solid;
+}
+.dropdown-menu {
+    border-radius:2px;
+    margin: 0;
+    border-color: var(--border-color);
+}
+.dropdown-menu .dropdown-item {
+    color: var(--text-color);
+    font-size: 12px;
+    padding: 6px 14px !important;
+}
+.dropdown-menu .dropdown-item:hover {
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: var(--text-color) ;
+    text-align: left;
+    list-style: none;
+    background: var(--container-bg-color);
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-radius: .25rem;
 }
 .sidebar {
     width:85px !important;
@@ -794,7 +894,7 @@ iframe{
   .play-btn{
     position: absolute;
     right: 100px;
-    top: 50%;
+    top: 32%;
     width: 65px;
     height: 65px;
     display: flex;
@@ -952,6 +1052,7 @@ iframe{
 .login-main-left {
     margin: auto;
     max-width: 335px;
+    padding: 15px;
 }
 .login-main-right.bg-dark {
     border-radius: 2px;
@@ -980,7 +1081,45 @@ iframe{
 .mt-6{
     padding-top: 7rem;
 }
+.modal-content {
+    border: medium none;
+    border-radius: 2px;
+    background-color: var(--background-color);
+}
+.close {
+    color: white;
+}
+.close:hover{
+    color: var(--main-color);
+    text-shadow: 0 1px 0 var(--main-color);
+}
 
+footer.sticky-footer {
+    background-color: var(--container-bg-color);
+    padding-top: 15px;
+    margin-left: 225px;
+    border-left: 2px solid var(--border-color);
+}
+footer.sticky-footer .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+}
+body.sidebar-toggled footer.sticky-footer {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    body.sidebar-toggled footer.sticky-footer {
+        width: calc(100% - 90px);
+        margin-left: 90px;
+   }
+}
+.app a{
+    font-size: 30px;
+    color: var(--text-color);
+}
+.app a:hover{
+    color: var(--main-color);
+}
 /*responsive */
 /* Mobile Media */
 /* Extra small devices (portrait phones, less than 576px) */
@@ -1156,7 +1295,17 @@ iframe{
     .video-card:hover .play-icon{
         display: none;
     }
-
+    .social-icon{
+        bottom: 80px;
+        left: 4px;
+    }
+    .scroll-to-top{
+        bottom: 80px;
+    }
+    footer{
+        display: none;
+    }
+    
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -1174,6 +1323,15 @@ iframe{
         padding-left: 13px;
         padding-right: 15px !important;
         padding-top: 1.8rem !important;
+    }
+    .login-main-body{
+        padding: 15px;
+    }
+    .login-main-body .login-main-wrapper{
+        padding-top: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
     }
     .container {
         max-width: 100%;
@@ -1315,6 +1473,16 @@ iframe{
         grid-template-columns: repeat(4,1fr);
         row-gap: 10px;
         column-gap: 3px;
+    }
+    .social-icon{
+        bottom: 80px;
+        left: 4px;
+    }
+    .scroll-to-top{
+        bottom: 80px;
+    }
+    footer{
+        display: none;
     }
 }
 /* Medium devices (tablets, 768px and up) */
@@ -1474,6 +1642,16 @@ iframe{
         position: static;
         width: 76px;
         height: 29px;
+    }
+    .social-icon{
+        bottom: 80px;
+        left: 4px;
+    }
+    .scroll-to-top{
+        bottom: 80px;
+    }
+    footer{
+        display: none;
     }
 }
 /* Large devices (desktops, 992px and up) */
