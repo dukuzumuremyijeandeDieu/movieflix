@@ -932,6 +932,55 @@ iframe{
     text-decoration: none;
     color: white;
 }
+/* Login Pages */
+.login-main-wrapper {
+    background: var(--background-color);
+   /* Old browsers */
+    background: -moz-linear-gradient(-45deg, var(--background-color) 0%, var(--background-color) 100%);
+   /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, var(--background-color) 0%,var(--background-color) 100%);
+   /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, var(--background-color) 0%,var(--background-color) 100%);
+   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#242424',GradientType=1 );
+   /* IE6-9 fallback on horizontal gradient */
+    height: calc(100vh - 0rem);
+}
+.full-height {
+    height: calc(100vh - 0rem);
+}
+.login-main-left {
+    margin: auto;
+    max-width: 335px;
+}
+.login-main-right.bg-dark {
+    border-radius: 2px;
+    margin: auto;
+    max-width: 561px;
+    background-color: transparent !important;
+}
+.carousel-login-card h5 {
+    font-size: 18px;
+}
+.login-main-wrapper .form-control {
+    background: transparent none repeat scroll 0 0;
+}
+.login-main-right .owl-theme .owl-controls .owl-page span {
+    background: #dcdcdc;
+    border-radius: 50px;
+    height: 16px;
+    margin: 0 2px;
+    opacity: unset;
+    width: 16px;
+}
+.btn-lg {
+    font-size: 15px;
+    padding: 12px 16px;
+}
+.mt-6{
+    padding-top: 7rem;
+}
+
 /*responsive */
 /* Mobile Media */
 /* Extra small devices (portrait phones, less than 576px) */
@@ -1260,6 +1309,12 @@ iframe{
     }
     .video-card:hover .play-icon{
         display: none;
+    }
+    .movies-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 10px;
+        column-gap: 3px;
     }
 }
 /* Medium devices (tablets, 768px and up) */
