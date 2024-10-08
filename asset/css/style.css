@@ -1100,6 +1100,7 @@ footer.sticky-footer {
     margin-left: 225px;
     border-left: 2px solid var(--border-color);
 }
+
 footer.sticky-footer .copyright {
     line-height: 1;
     font-size: 0.8rem;
@@ -1120,6 +1121,7 @@ body.sidebar-toggled footer.sticky-footer {
 .app a:hover{
     color: var(--main-color);
 }
+
 /*responsive */
 /* Mobile Media */
 /* Extra small devices (portrait phones, less than 576px) */
@@ -1758,4 +1760,19 @@ body.sidebar-toggled footer.sticky-footer {
     }
     
     
+}
+/*admin */
+.small_details{
+    display: flex;
+    flex-direction: column;
+}
+.nav-pills .nav-link{
+    color: var(--text-color-color) !important;
+    background-color: var(--container-bg-color) ;
+}
+.nav-pills .nav-link.active{
+    background-color: var(--main-color) !important;
+}
+.nav-pills .nav-link:focus{
+    background-color: var(--main-color) !important;
 }

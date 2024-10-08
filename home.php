@@ -1,3 +1,64 @@
+<?php
+include('session.php');
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Assuming the user is logged in and user_id is stored in the session
+$userId = $_SESSION['user_id'] ?? null;
+
+if ($userId === null) {
+    die('User is not logged in.');
+}
+
+// Database credentials
+$host = 'localhost';
+$db = 'rukari'; // Replace with your database name
+$user = 'root';             // Replace with your database username
+$pass = '';                 // Replace with your database password
+$charset = 'utf8mb4';
+
+// Data Source Name (DSN)
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+// PDO options
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+    // Create a PDO instance
+    $pdo = new PDO($dsn, $user, $pass, $options);
+
+    // Prepare the SQL statement to select the profile picture
+    $stmt = $pdo->prepare("SELECT profile_image FROM users WHERE user_id = :user_id");
+    $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+
+    // Execute the statement
+    $stmt->execute();
+
+    // Fetch the result
+    $user = $stmt->fetch();
+
+    // Check if a profile picture exists
+    if ($user && !empty($user['profile_image'])) {
+        // Store the profile picture path in a variable
+        $profilePic = $user['profile_image'];
+    } else {
+        // Default image if no profile picture is set
+        $profilePic = './assest/images/default/default-user-profile.jpg';
+    }
+} catch (PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -47,12 +108,11 @@
           <div class="user-profile dropdown no-arrow">
             <a class="dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="image">
-                <img src="./asset/images/faces/face1.jpg" class="img-fluid" alt="">
+                
+                <img src="<?= htmlspecialchars($profilePic); ?>" class="img-fluid" alt="">
               </div>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="account.html"><i class="fas fa-fw fa-user-circle"></i> &nbsp; My Account</a>
-                <a class="dropdown-item" href="subscriptions.html"><i class="fas fa-fw fa-video"></i> &nbsp; Subscriptions</a>
-                <a class="dropdown-item" href="settings.html"><i class="fas fa-fw fa-cog"></i> &nbsp; Settings</a>
+                <a class="dropdown-item" href="account.php"><i class="fas fa-fw fa-user-circle"></i> &nbsp; My Account</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-sign-out-alt"></i> &nbsp; Logout</a>
              </div>
@@ -806,29 +866,30 @@
       </div>
       <!-- /.container-fluid -->
             <!-- Sticky Footer -->
-            <footer class="sticky-footer">
-              <div class="container">
-                 <div class="row no-gutters">
-                    <div class="col-lg-6 col-sm-6">
-                      <p class="pb-0"><span><strong class="text-red">E-mail:</strong></span> abijurujothan@gmail.com</p>
-                      <p class="pb-0"><span><strong class="text-red">Tel:</strong></span>+2507888888</p>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 text-right">
-                       <div class="app">
-                          <a href="#"><i class="bi bi-facebook"></i></a>
-                          <a href="#"><i class="bi bi-whatsapp"></i></a>
-                          <a href="#"><i class="bi bi-instagram"></i></a>
-                          <a href="#"><i class="bi bi-linkedin"></i></a>
-                       </div>
-                    </div>
-                    
-                 </div>
-              </div>
-           </footer>
+     <footer class="sticky-footer">
+      <div class="container bottom-fixed">
+         <div class="row no-gutters">
+            <div class="col-lg-6 col-sm-6">
+              <p class="pb-0"><span><strong class="text-red">E-mail:</strong></span> abijurujothan@gmail.com</p>
+              <p class="pb-0"><span><strong class="text-red">Tel:</strong></span>+2507888888</p>
+            </div>
+            <div class="col-lg-6 col-sm-6 text-right">
+               <div class="app">
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-whatsapp"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+               </div>
+            </div>
+            
+         </div>
+      </div>
+   </footer>
       </div>
       <!-- /.content-wrapper -->
     </div>
     <!-- /#wrapper -->
+     
     <!-- Overflow icon-->
       <a href="" class="social-icon rounded">
         <img src="./asset/images/get-logo-whatsapp-png-pictures-1.png" width="24px" height="24px" class="img-fluid" alt="">
@@ -850,7 +911,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-               <a class="btn btn-primary" href="login.html">Logout</a>
+               <a class="btn btn-primary" href="logout.php">Logout</a>
             </div>
          </div>
       </div>
